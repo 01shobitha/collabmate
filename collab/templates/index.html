@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Home</h1>
+  <p>Welcome to Collabmate, a website developed by <em>SDKT</em>!</p>
+  <h2>Dynamic content</h2>
+
+<h2>From views:</h2>
+<p>{{greeting}}</p>
+<p><a href="{% url 'details' username %}">Details</a> of {{user.get_username}}</p>
+<a href="{% url 'details' username %}"></a>
+{% endblock %}
