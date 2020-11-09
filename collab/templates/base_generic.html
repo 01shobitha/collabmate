@@ -4,33 +4,59 @@
   {% block title %}<title>Collabmate</title>{% endblock %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
   <!-- Add additional CSS in static file -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-2">
+  
       {% block sidebar %}
-        <ul class="sidebar-nav">
+        <!-- <ul class="sidebar-nav">
           <li><a href="{% url 'index' %}">Home</a></li>
           <li><a href="">Something</a></li>
-          <li><a href="">Something else</a></li>
-
+          <li><a href="">Somethin g else</a></li>-->
+          <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li id="nav-home"><a href="{% url 'index' %}">Home</a></li>
+                  <li id="nav-something"><a href="#">Something</a></li>
+                  <li id="nav-something-else"><a href="#">Somthin else ig</a></li>
+                
           {% if user.is_authenticated %}
-            <li>User: {{ user.get_username }}</li>
-            <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>   
+            <!-- <li>User: {{ user.get_username }}</li>
+            <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>    -->
+            <li id="nav-user"><a>{{ user.get_username }}</a></li>
+            <li id="nav-logout"><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
             {% else %}
-            <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>   
+            <!-- <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>    -->
+            <li id="nav-login"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
           {% endif %} 
 
-        </ul>
+        <!-- </ul> -->
+                </ul>
+              </div>
+            </div>
+          </nav>
         {% endblock %}
-      </div>
-      <div class="col-sm-10 ">{% block content %}{% endblock %}</div>
-    </div>
-  </div>
+      <!-- <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-2">
+          </div>      
+            <div class="col-sm-10 "> -->{% block content %}{% endblock %}<!-- </div>
+        </div>
+      </div> -->
 </body>
 </html>
