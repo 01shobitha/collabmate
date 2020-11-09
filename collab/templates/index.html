@@ -7,12 +7,12 @@
       </div>      
         <div class="col-sm-10 ">
 			<h1>Home</h1>
-			<p>Welcome to Collabmate, a website developed by <em>SDKT</em>!</p>
+			<h5>Welcome to Collabmate, a website developed by <em>SDKT</em>!</h5>
 			<h2>Dynamic content</h2>
 
 			<h2>From views:</h2>
-			<p>{{greeting}}</p>
-			<p><a href="{% url 'details' username %}">Details</a> of {{user.get_username}}</p>
+			<h5>{{greeting}}</h5>
+			<h5><a href="{% url 'details' username %}">Details</a> of {{user.get_username}}</h5>
 			<a href="{% url 'details' username %}"></a>
 		</div>
     </div>
