@@ -1,11 +1,61 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Home</h1>
-  <p>Welcome to Collabmate, a website developed by <em>SDKT</em>!</p>
-  <h2>Dynamic content</h2>
 
-<h2>From views:</h2>
-<p>{{greeting}}</p>
-<p><a href="{% url 'details' username %}">Details</a> of {{user.get_username}}</p>
+{% if user.is_authenticated %}
+<div class="fixed-bottom">
+<a href="{% url 'details' username %}" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Details</a>
+</div>
+
+<div class = "text-center margin-change">
+
+
+
+
+<h3>My Projects</h3>
+
+<div class="card-columns">
+  <div class="card card border-info mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Collabmate</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <a href="https://github.com/01shobitha/collabmate" class="btn btn-info">Github Link</a>
+    </div>
+  </div>
+  <div class="card card border-info mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Collaborative team work tool</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <a href="https://github.com/01shobitha/ctwt" class="btn btn-info">Github Link</a>
+    </div>
+  </div>
+  <div class="card card border-info mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Distributed Mutual Exclusion</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <a href="https://github.com/01shobitha/Distributed-Mutex" class="btn btn-info">Github Link</a>
+    </div>
+  </div>
+  <div class="card card border-info mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Library Project</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <a href="https://github.com/01shobitha/lib_project" class="btn btn-info">Github Link</a>
+    </div>
+  </div>
+  <div class="card card border-info mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Blog</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <a href="https://github.com/01shobitha/blog" class="btn btn-info">Github Link</a>
+      <a href="#" class="btn btn-warning">See live</a>
+    </div>
+  </div>
+</div>
+
+{% else %}
+<p>Welcome to Collabmate, a website developed by <em>SDKT</em>!</p>
+<P>Login to see more</P>
+{% endif %}
+</div>
 {% endblock %}
