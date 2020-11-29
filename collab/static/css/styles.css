@@ -3,3 +3,111 @@
     padding: 0;
     list-style: none;
 }
+
+.header
+{
+    height: 100vh;
+}
+
+.navbar-style
+{
+    box-shadow: 0 5px 10px #161616;
+}
+
+.container {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* form {
+    margin-left: 30%;
+} */
+
+.align-center {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .container-1{
+      margin-left: 20%;
+      margin-right: 20%;
+  }
+
+  .bg-color
+  {    
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color: #f3c391;
+      border-radius: 10px;
+      box-shadow: 0 1px 5px #161616;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
+  }
+
+  .card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+
+    @include media-breakpoint-only(sm) {
+        column-count: 1;
+    }
+
+    @include media-breakpoint-only(md) {
+        column-count: 2;
+    }
+  }
+
+  .margin-change
+  {
+      margin-top: 10%;
+  }
+
+  .fixed-bottom
+  {
+    left: 90%;
+    margin-bottom: 5%;
+  }
+
+  .btn-outline-warning
+  {
+    color: #f6b26b;
+    border-color:#f6b26b;
+  }
