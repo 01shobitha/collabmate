@@ -4,11 +4,19 @@ from django.shortcuts import render
 def index(request):
     greeting = "Hai! page is working"
     username = request.user.username
+
+    searched_item = request.GET.get('search_people')
+    
+    # if not searched_item:
+    #     searched_item = "no results found"
+
+    print(searched_item)
+
     context = {
         'greeting': greeting,
-        'username': username, 
+        'username': username,
+        'searched_item': searched_item, 
     }
-
     return render(request,'index.html', context = context)
 
 def details(request, username):
@@ -22,6 +30,7 @@ def details(request, username):
     context = {
             'name': name, 
             'message': message,
+            'username': username,
         }
 
     return render(request, 'details.html', context = context)
