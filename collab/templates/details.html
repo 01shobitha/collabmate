@@ -1,5 +1,100 @@
 {% extends "base_generic.html" %}
 {% block content %}
-<h1>details page worked!</h1>
-{{message}}
+<div class="mt-5 mb-5">
+    <h3 class="mb-4">Hai, I am {{username}} and this page is all about me</h3>
+
+
+    <div class="card mb-4">
+        <div class="card-header">
+          About me
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">I am an open source enthusiast. I began contributing to open source in 2017. I also like web development. I have been interested in this area since my class 10th. </h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+        </div>
+    </div>
+    
+
+    <div class="card mb-4">
+        <div class="card-header">
+          Education
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">I completed my schooling from Kendriya Vidyalaya. Currently a final year computer science engineer </h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    
+        </div>
+    </div>
+
+
+    <div class="card mb-5">
+        <div class="card-header">
+            Projects
+        </div>
+        <div class="card-body">
+            <div class="row">
+
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <div class="card card border-info mb-4">
+                    <div class="card-body">
+                      <h5 class="card-title">Collabmate</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                      <a href="https://github.com/01shobitha/collabmate" class="btn btn-info">Github Link</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <div class="card card border-info mb-4">
+                    <div class="card-body">
+                      <h5 class="card-title">Gupshup</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                      <a href="https://github.com/01shobitha/ctwt" class="btn btn-info">Github Link</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <div class="card card border-info mb-4">
+                    <div class="card-body">
+                      <h5 class="card-title">Distributed Mutual Exclusion</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                      <a href="https://github.com/01shobitha/Distributed-Mutex" class="btn btn-info">Github Link</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <div class="card card border-info mb-4">
+                    <div class="card-body">
+                      <h5 class="card-title">Library Project</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                      <a href="https://github.com/01shobitha/lib_project" class="btn btn-info">Github Link</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <div class="card card border-info mb-4">
+                    <div class="card-body">
+                      <h5 class="card-title">Blog</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                      <a href="https://github.com/01shobitha/blog" class="btn btn-info">Github Link</a>
+                      <a href="#" class="btn btn-warning ml-2">See live</a>
+                    </div>
+                  </div>
+                </div>
+                
+                  
+                </div>
+
+        </div>
+
+    </div>
+
+    <a href="#" class="btn btn-primary">Linkedin</a>
+    <a href="#" class="btn btn-dark">Github</a>
+    <a href="#" class="btn btn-success ml-2">Blog</a>
+</div>
 {% endblock %}

@@ -1,6 +1,7 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
+{% load static %}
 
 {% if user.is_authenticated %}
 <div class="fixed-bottom">
@@ -9,53 +10,237 @@
 
 <div class = "text-center margin-change">
 
+{% if searched_item == "html" %}
+<h2 class = "mb-5">People who are good at {{searched_item}}</h2>
+<div class="row mb-5 ">
+
+  <div class="col-sm-12 col-md-6 col-lg-4"> 
+  <div class="card">
+    <img class="card-img-top" src="{% static 'images/shobitha.jpg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Shobitha M</h5>
+      <p class="card-text">Full stack web developer</p>
+      <p class="card-text"><small class="text-muted">shobitha@gmail.com</small></p>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-sm-12 col-md-6 col-lg-4 mb-4"> 
+  <div class="card">
+    <img class="card-img-top" src="{% static 'images/saabu.jpg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Tharun Thomas</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in tristique sem. Sed in malesuada ligula. Nam nec sollicitudin neque.  Morbi accumsan sollicitudin nisi vitae euismod.</p>
+      <p class="card-text"><small class="text-muted">tharun@gmail.com</small></p>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="col-sm-12 col-md-6 col-lg-4"> 
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/ashwanth.jpeg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Ashwanth</h5>
+        <p class="card-text">Amrita Vishwa Vidyapeetham.</p>
+        <p class="card-text"><small class="text-muted">ashwanth@gmail.com</small></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-6 col-lg-4"> 
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/karan.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Karan</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in tristique sem. Sed in malesuada ligula.</p>
+        <p class="card-text"><small class="text-muted">karan@gmail.com</small></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-6 col-lg-4"> 
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/sanjay.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Sanjay</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in tristique sem. Sed in malesuada ligula.</p>
+        <p class="card-text"><small class="text-muted">sanjay@gmail.com</small></p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+{% elif searched_item == "design" %}
+<h3 class = "mb-5">People who are good at {{searched_item}}</h3>
+  <div class="row">
+
+    <div class="col-sm-12 col-md-6 col-lg-4"> 
+      <div class="card">
+       <img class="card-img-top" src="{% static 'images/nimisha.jpg' %}" alt="Card image cap">
+       <div class="card-body">
+         <h5 class="card-title">Nimisha</h5>
+         <p class="card-text">Cybersecurity enthusiats</p>
+         <p class="card-text"><small class="text-muted">nimisha@gmail.com</small></p>
+       </div>
+      </div> 
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4"> 
+      <div class="card">
+       <img class="card-img-top" src="{% static 'images/geethna.jpg' %}" alt="Card image cap">
+       <div class="card-body">
+         <h5 class="card-title">Geethna</h5>
+         <p class="card-text">Cybersecurity enthusiats</p>
+         <p class="card-text"><small class="text-muted">geethna@gmail.com</small></p>
+       </div>
+      </div> 
+    </div>
+
+  </div>
+
+{% elif searched_item == "security" %}
+
+<h3 class = "mb-5">People who are good at {{searched_item}}</h3>
+  <div class="row">
+
+    <div class="col-sm-12 col-md-6 col-lg-4 mb-4"> 
+      <div class="card">
+       <img class="card-img-top" src="{% static 'images/dixit.jpg' %}" alt="Card image cap">
+       <div class="card-body">
+         <h5 class="card-title">Shruti Dixit</h5>
+         <p class="card-text">Cybersecurity enthusiats</p>
+         <p class="card-text"><small class="text-muted">shruthi@gmail.com</small></p>
+       </div>
+      </div> 
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4"> 
+      <div class="card">
+       <img class="card-img-top" src="{% static 'images/ashwathi.jpg' %}" alt="Card image cap">
+       <div class="card-body">
+         <h5 class="card-title">Aswathi</h5>
+         <p class="card-text">Cybersecurity enthusiats</p>
+         <p class="card-text"><small class="text-muted">ashwathi@gmail.com</small></p>
+       </div>
+      </div> 
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4"> 
+      <div class="card">
+       <img class="card-img-top" src="{% static 'images/geethna.jpg' %}" alt="Card image cap">
+       <div class="card-body">
+         <h5 class="card-title">Geethna</h5>
+         <p class="card-text">Cybersecurity enthusiats</p>
+         <p class="card-text"><small class="text-muted">geethna@gmail.com</small></p>
+       </div>
+      </div> 
+    </div>
+
+  </div>
+
+{% elif searched_item == "html, security" %}
+
+<h3 class = "mb-5">People who are good at {{searched_item}}</h3>
+  <div class="row">
+
+    <div class="col-sm-12 col-md-6 col-lg-4"> 
+      <div class="card">
+       <img class="card-img-top" src="{% static 'images/geethna.jpg' %}" alt="Card image cap">
+       <div class="card-body">
+         <h5 class="card-title">Geethna</h5>
+         <p class="card-text">Cybersecurity enthusiats</p>
+         <p class="card-text"><small class="text-muted">geethna@gmail.com</small></p>
+       </div>
+      </div> 
+    </div>
+
+  </div>
+
+
+{% elif searched_item %}
+
+<a href="{% url 'index' %}" class="btn btn-outline-danger mb-5" role="button" aria-pressed="true"><h3>No results for {{searched_item}}</h3></a>
 
 
 
-<h3>My Projects</h3>
+{% endif %}
 
-<div class="card-columns">
-  <div class="card card border-info mb-3">
+
+<h3 class="mb-5">My Projects</h3>
+
+<div class="row">
+
+<div class="col-sm-12 col-md-6 col-lg-4">
+  <div class="card card border-info mb-4">
     <div class="card-body">
       <h5 class="card-title">Collabmate</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in tristique sem. Sed in malesuada ligula..</p>
       <a href="https://github.com/01shobitha/collabmate" class="btn btn-info">Github Link</a>
-    </div>
-  </div>
-  <div class="card card border-info mb-3">
-    <div class="card-body">
-      <h5 class="card-title">Collaborative team work tool</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <a href="https://github.com/01shobitha/ctwt" class="btn btn-info">Github Link</a>
-    </div>
-  </div>
-  <div class="card card border-info mb-3">
-    <div class="card-body">
-      <h5 class="card-title">Distributed Mutual Exclusion</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <a href="https://github.com/01shobitha/Distributed-Mutex" class="btn btn-info">Github Link</a>
-    </div>
-  </div>
-  <div class="card card border-info mb-3">
-    <div class="card-body">
-      <h5 class="card-title">Library Project</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <a href="https://github.com/01shobitha/lib_project" class="btn btn-info">Github Link</a>
-    </div>
-  </div>
-  <div class="card card border-info mb-3">
-    <div class="card-body">
-      <h5 class="card-title">Blog</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <a href="https://github.com/01shobitha/blog" class="btn btn-info">Github Link</a>
-      <a href="#" class="btn btn-warning">See live</a>
     </div>
   </div>
 </div>
 
+<div class="col-sm-12 col-md-6 col-lg-4">
+  <div class="card card border-info mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Gupshup</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in tristique sem. Sed in malesuada ligula..</p>
+      <a href="https://github.com/01shobitha/ctwt" class="btn btn-info">Github Link</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-12 col-md-6 col-lg-4">
+  <div class="card card border-info mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Distributed Mutual Exclusion</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in tristique sem. Sed in malesuada ligula..</p>
+      <a href="https://github.com/01shobitha/Distributed-Mutex" class="btn btn-info">Github Link</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-12 col-md-6 col-lg-4">
+  <div class="card card border-info mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Library Project</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in tristique sem. Sed in malesuada ligula..</p>
+      <a href="https://github.com/01shobitha/lib_project" class="btn btn-info">Github Link</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-12 col-md-6 col-lg-4">
+  <div class="card card border-info mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Blog</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in tristique sem. Sed in malesuada ligula..</p>
+      <a href="https://github.com/01shobitha/blog" class="btn btn-info">Github Link</a>
+      <a href="#" class="btn btn-warning ml-2">See live</a>
+    </div>
+  </div>
+</div>
+
+  
+</div>
+
 {% else %}
-<p>Welcome to Collabmate, a website developed by <em>SDKT</em>!</p>
-<P>Login to see more</P>
+
+
+<div class="mt-5 card card border-info text-center mb-3">
+  <img class="card-img-top" src="{% static 'images/logo.png' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class=" display-3 card-title">Welcome to Collabmate</h5>
+    <h3 class="card-text">A website developed by <em>SDKT</em>!</h3>
+    <p class="card-text">Login to see more</p>
+  </div>
+</div>
+
+
+
 {% endif %}
 </div>
 {% endblock %}
